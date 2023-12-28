@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: "jdbc:postgresql://ep-weathered-water-64234085-pooler.ap-southeast-1.aws.neon.tech/Project_1DB"
+    url: "jdbc:postgresql://ep-weathered-water-64234085.ap-southeast-1.aws.neon.tech/Project_1DB"
     username: "anupkr08oct2002"
     password: "WpwS1Z6CzUaX"
