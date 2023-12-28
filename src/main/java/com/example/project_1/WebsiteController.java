@@ -36,6 +36,7 @@ public class WebsiteController {
 
     @PostMapping(value = "/signIn")
     public String signIn(@ModelAttribute("signUpInfo") SignUpInfo signUpInfo, final Model model) {
+        System.out.println(signUpInfo.toString());
         if(userDataRepo.findById(signUpInfo.getUsername()).isEmpty()) {
             userDataRepo.save(new UserData(signUpInfo.getUsername(), signUpInfo.getPassword()));
 
@@ -47,6 +48,8 @@ public class WebsiteController {
 
     @PostMapping(value = "/login")
     public String login(@ModelAttribute("loginInfo") LoginInfo loginInfo, final Model model) {
+        System.out.println(loginInfo.toString());
+
         if(userDataRepo.findById(loginInfo.getUsername()).isPresent()) {
             return "redirect:/mainPage";
         }
@@ -67,6 +70,8 @@ public class WebsiteController {
         contactData.setName(contactInfo.getName());
         contactData.setEmail(contactInfo.getEmail());
         contactData.setMessage(contactInfo.getMessage());
+
+        System.out.println(contactData.toString());
 
         contactDataRepo.save(contactData);
 
