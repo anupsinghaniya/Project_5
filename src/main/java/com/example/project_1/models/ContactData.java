@@ -18,14 +18,10 @@ import org.hibernate.annotations.Proxy;
 @Table(name = "contact_data")
 @Proxy(lazy = false)
 public class ContactData {
-    @Id
-    @GeneratedValue(strategy=GenerationType.TABLE)
-    @Column(name = "id")
-    private Integer id;
-
     @Column(name = "name")
     private String name;
 
+    @Id
     @Column(name = "email")
     private String email;
 
