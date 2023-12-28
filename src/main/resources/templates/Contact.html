@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="shortcut icon" type="image/jpg/png" href="Heromoto1.png"/>
+    <link rel="shortcut icon" type="image/jpg/png" href="../static/Heromoto1.png"/>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -87,7 +87,11 @@
     <h2>Get in Touch</h2>
     <p>If you have any questions or feedback, please fill out the form below:</p>
 
-    <form>
+    <form action="#"
+          th:action="@{/sendContactInfo}"
+          method="post"
+          th:object="${contactInfo}">
+
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
