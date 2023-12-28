@@ -73,7 +73,6 @@
         }
     </style>
     <title>Heromotocorp</title>
-    <img th:src="@{/Heromoto1.png}" alt="Logo" class="logo">
 </head>
 <body>
 
@@ -83,7 +82,7 @@
           th:action="@{/login}"
           method="post"
           th:object="${loginInfo}">
-        <img src="../static/Heromoto.png" alt="Logo" class="logo">
+        <img th:src="@{/Heromoto.png}" alt="Logo" class="logo">
         <h2>Heromotocorp LTD <br><br> Login</h2>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
