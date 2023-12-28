@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .switch-form {
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .switch-form a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Add styles for the logo */
+        .logo {
+            width: 150px; /* Adjust the width as needed */
+            height: auto;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+    <title>Heromotocorp</title>
+    <link rel="shortcut icon" type="image/jpg/png" href="Heromoto1.png"/>
+</head>
+<body>
+
+<div>
+    <form id="login-form">
+        <form action = " signup.php" method="post">
+        <img src="Heromoto.png" alt="Logo" class="logo">
+        <h2>Heromotocorp LTD <br><br> Login</h2>
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" name="login-username" required>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required>
+
+        <button type="submit">Login</button>
+
+        <div class="switch-form">
+            Don't have an account? <a href="#" onclick="showSignupForm()">Sign up</a>
+        </div>
+    </form>
+
+    <form id="signup-form" style="display: none;">
+        <img src="Heromoto.png" alt="Logo" class="logo">
+        <h2>Heromotocorp LTD <br><br> Sign up</h2>
+        <label for="signup-username">Username:</label>
+        <input type="text" id="signup-username" name="signup-username" required>
+
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="signup-password" required>
+
+        <button type="submit">Sign up</button>
+
+        <div class="switch-form">
+            Already have an account? <a href="#" onclick="showLoginForm()">Login</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    function showSignupForm() {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('signup-form').style.display = 'block';
+    }
+
+    function showLoginForm() {
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById('login-form').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
